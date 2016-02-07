@@ -83,5 +83,7 @@ RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.2.0/Preco
 # Install local Elixir hex and rebar
 RUN /usr/local/bin/mix local.hex --force && \
     /usr/local/bin/mix local.rebar --force
+    
+RUN /usr/local/bin/mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
 
 WORKDIR /
